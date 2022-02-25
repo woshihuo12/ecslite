@@ -183,7 +183,7 @@ namespace Leopotam.EcsLite {
             // kill components.
             if (entityData.ComponentsCount > 0) {
                 var idx = 0;
-                while (entityData.ComponentsCount > 0 && idx < _poolsCount) {
+                while (idx < _poolsCount) {
                     for (; idx < _poolsCount; idx++) {
                         if (_pools[idx].Has (entity)) {
                             _pools[idx++].Del (entity);
